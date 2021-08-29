@@ -1,0 +1,45 @@
+form cidades (btnsalvar)
+
+/*String cidnome, ciduf;
+                cidnome = String.valueOf(nomeField.getText());
+                ciduf = String.valueOf(ufField.getText());
+                EntityManagerFactory emf = Persistence.createEntityManagerFactory("ProjetoLocatech_TI.2019PU");
+                EntityManager em = emf.createEntityManager();
+                String jpql = "select c from Tblcidade c";
+                List<Tblcidade> listc = em.createQuery(jpql).getResultList();
+                for (Tblcidade c : listc) {
+                    if (c.getNome().equals(cidnome) && c.getUf().equals(ciduf)) {
+                        JOptionPane.showMessageDialog(null, "Cidade já cadastrada!");
+                    }
+                }*/
+
+form cliente (btnsalvar)
+
+String vercpf;
+        vercpf = String.valueOf(cpfField.getText());
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ProjetoLocatech_TI.2019PU");
+        EntityManager em = emf.createEntityManager();
+        String jpql = "select c from Tblcliente c";
+        List<Tblcliente> listc = em.createQuery(jpql).getResultList();
+        for (Tblcliente c : listc) {
+            if (c.getCpf().equals(vercpf)) {
+                JOptionPane.showMessageDialog(null, "CPF já cadastrado!");
+            }
+        }
+
+
+FormFuncionarios (btnsalvar)
+
+   String vercpf;
+         vercpf = String.valueOf(cpfField.getText());
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ProjetoLocatech_TI.2019PU");
+        EntityManager em = emf.createEntityManager();
+        String jpql = "select f from Tblfuncionario f";
+        List<Tblfuncionario> listf = em.createQuery(jpql).getResultList();
+         for (Tblfuncionario f : listf) {
+            if (f.getCpf().equals(vercpf)) {
+                JOptionPane.showMessageDialog(null, "CPF já cadastrado!");
+            }
+        }
+
+
