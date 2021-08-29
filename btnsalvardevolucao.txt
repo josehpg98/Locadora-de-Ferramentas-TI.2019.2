@@ -1,0 +1,13 @@
+ try {
+            entityManager.getTransaction().commit();
+            entityManager.getTransaction().begin();
+        } catch (RollbackException rex) {
+            rex.printStackTrace();
+            entityManager.getTransaction().begin();
+            List<br.edu.ifsul.classes.Tbldevolucao> merged = new ArrayList<br.edu.ifsul.classes.Tbldevolucao>(list.size());
+            for (br.edu.ifsul.classes.Tbldevolucao t : list) {
+                merged.add(entityManager.merge(t));
+            }
+            list.clear();
+            list.addAll(merged);
+        }
